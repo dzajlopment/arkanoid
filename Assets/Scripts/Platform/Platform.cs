@@ -4,9 +4,21 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public float speed = 5;
-    void FixedUpdate() {
+    [SerializeField] float speed = 5f;
+    [SerializeField] Vector2 launchDir = new Vector2(0, 1);
+    Rigidbody2D rb;
+    
+    void Start() {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update() {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * horizontalInput * speed;
+        rb.velocity = Vector2.right * horizontalInput * speed;
+
+        if(transform.childCount > 0 && Input.GetButtonDown("Jump")) {
+            BallVelocity ball = GetComponentInChildren<BallVelocity>();
+            ball.Launch(launchDir);
+        }
     }
 }
