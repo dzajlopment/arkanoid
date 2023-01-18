@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 
 public class BallVelocity : MonoBehaviour {
-    public float ballSpeed = 5;
+    [SerializeField] float ballSpeed = 5f;
 
     float hitAspect(Vector2 ballPosition, Vector2 racketPosition, float platformWidth) {
         return (ballPosition.x - racketPosition.x) / platformWidth;        
