@@ -58,13 +58,15 @@ public class Level {
     /// </summary>
     public List<BrickData> Bricks { get; }
 
+    public Level() {
+        
+    }
+
     public Level(bool official, byte number, string name, Boosters boosters, List<BrickData> bricks) {
-        return new Level {
-            Official = official,
-            Number = number,
-            Name = name,
-            Boosters = boosters,
-            Bricks = bricks,
-        };
+        Official = official;
+        Number = number;
+        Name = name;
+        Boosters = boosters;
+        Bricks = bricks;
     }
 }
