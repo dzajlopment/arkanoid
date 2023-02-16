@@ -13,6 +13,10 @@ public class Platform : MonoBehaviour {
 
     float leftBorderX = (float)-8.23;
     float rightBorderX = (float)8.23;
+    float mouseX;
+    BoxCollider2D border;
+    Vector2 size;
+    float mouseInput;
 
     bool mouseIsOnGameScreen() {
         if (EditorWindow.mouseOverWindow) {
@@ -25,11 +29,15 @@ public class Platform : MonoBehaviour {
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        border = GetComponent<BoxCollider2D>();
+        size = border.size;
     }
 
     void Update() {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float mouseInput = Input.GetAxis("Mouse X");
+        mouseInput = Input.GetAxis("Mouse X");
+        mouseX = Input.mousePosition.x;
+        //print(size);
         rb.velocity = Vector2.right * horizontalInput * speed;
 
         //Moves the platform to the x mouse position when mouse movement is detected
