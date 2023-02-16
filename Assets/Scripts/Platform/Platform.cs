@@ -4,8 +4,10 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEditor;
 using System.Runtime.InteropServices;
+using System;
 
-public class Platform : MonoBehaviour {
+public class Platform : MonoBehaviour
+{
     [SerializeField] float speed = 5f;
     [SerializeField] Vector2 launchDir = new Vector2(0, 1);
 
@@ -13,14 +15,14 @@ public class Platform : MonoBehaviour {
 
     float leftBorderX = (float)-8.23;
     float rightBorderX = (float)8.23;
-    float mouseX;
+    float mouseInput;
     BoxCollider2D border;
     Vector2 size;
-    float mouseInput;
+    Ray castPoint;
 
-    bool mouseIsOnGameScreen() {
+    bool mouseIsOnGameScreen(){
         if (EditorWindow.mouseOverWindow) {
-            if(EditorWindow.mouseOverWindow.ToString() == " (UnityEditor.GameView)") {
+            if (EditorWindow.mouseOverWindow.ToString() == " (UnityEditor.GameView)") {
                 return true;
             }
         }
@@ -36,9 +38,19 @@ public class Platform : MonoBehaviour {
     void Update() {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         mouseInput = Input.GetAxis("Mouse X");
-        mouseX = Input.mousePosition.x;
-        //print(size);
         rb.velocity = Vector2.right * horizontalInput * speed;
+
+        //Get mouse world position
+        castPoint = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Single singleCastPoint = (Single)castPoint.origin.x;
+
+        //Disallow to move outside the borders
+        if (singleCastPoint < leftBorderX) {
+            return;
+        }
+        if (singleCastPoint > rightBorderX) {
+            return;
+        }
 
         //Moves the platform to the x mouse position when mouse movement is detected
         if (mouseInput != 0) {
@@ -46,17 +58,6 @@ public class Platform : MonoBehaviour {
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 rb.transform.position = new Vector2(mousePosition.x, rb.position.y);
             }
-        }
-
-        //Disallow to move outside the borders
-        //TO IMPROVE
-        if (rb.position.x < leftBorderX) {
-            rb.transform.position = new Vector2(leftBorderX, rb.position.y);
-            return;
-        }
-        if (rb.position.x > rightBorderX) {
-            rb.transform.position = new Vector2(rightBorderX, rb.position.y);
-            return;
         }
 
         //Launches the ball if is grabbed by the platform
