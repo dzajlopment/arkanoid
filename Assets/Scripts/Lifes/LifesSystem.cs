@@ -21,7 +21,6 @@ public class LifesSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         refreshLifesText();
-        removeLife();
     }
 
     public void addLife(){
