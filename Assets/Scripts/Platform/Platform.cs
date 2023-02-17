@@ -16,23 +16,11 @@ public class Platform : MonoBehaviour
     float leftBorderX = (float)-8.23;
     float rightBorderX = (float)8.23;
     float mouseInput;
-    BoxCollider2D border;
     Vector2 size;
     Ray castPoint;
 
-    bool mouseIsOnGameScreen(){
-        if (EditorWindow.mouseOverWindow) {
-            if (EditorWindow.mouseOverWindow.ToString() == " (UnityEditor.GameView)") {
-                return true;
-            }
-        }
-        return false;
-    }
-
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-        border = GetComponent<BoxCollider2D>();
-        size = border.size;
     }
 
     void Update() {
@@ -54,10 +42,8 @@ public class Platform : MonoBehaviour
 
         //Moves the platform to the x mouse position when mouse movement is detected
         if (mouseInput != 0) {
-            if (mouseIsOnGameScreen()) {
-                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                rb.transform.position = new Vector2(mousePosition.x, rb.position.y);
-            }
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            rb.transform.position = new Vector2(mousePosition.x, rb.position.y);
         }
 
         //Launches the ball if is grabbed by the platform
