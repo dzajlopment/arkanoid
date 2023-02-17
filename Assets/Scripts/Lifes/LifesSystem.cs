@@ -8,7 +8,7 @@ public class LifesSystem : MonoBehaviour
 {
     public static LifesSystem instance;
     public TextMeshProUGUI lifesText;
-    int lifes = 3;
+    public int lifes = 3;
 
     void refreshLifesText(){
         lifesText.text = "Lifes: " + lifes.ToString();
@@ -21,14 +21,17 @@ public class LifesSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         refreshLifesText();
+        removeLife();
     }
 
     public void addLife(){
         lifes+=1;
+        refreshLifesText();
     }
 
     public void removeLife(){
         lifes -= 1;
+        refreshLifesText();
     }
 
 }
