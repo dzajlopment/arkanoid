@@ -6,9 +6,11 @@ public class BallFall : MonoBehaviour
 {
     float ballPositionY;
     public GameObject ball;
+    public GameObject platformObject;
     public Transform platform;
     float platformPositionX;
     Vector2 ballOnPlatformPosition;
+    int lifes;
 
 
     // Update is called once per frame
@@ -17,15 +19,20 @@ public class BallFall : MonoBehaviour
         
         if(ballPositionY < -6){
             LifesSystem.instance.removeLife();
-            platformPositionX = platform.transform.position.x;
-            // print(platformPositionX);
+            lifes = LifesSystem.instance.lifes;
 
+            //Delete the ball and platform on 0 lifes
+            if(lifes == 0){
+                Destroy(ball);
+                Destroy(platformObject);
+                return;
+            }
+
+            //Move the ball on platform
+            platformPositionX = platform.transform.position.x;
             BallVelocity.instance.Catch(platform);
             ballOnPlatformPosition = new Vector2(platformPositionX, (float)-3.88);
-            print(platformPositionX);
             transform.position = ballOnPlatformPosition;
-            // ball.transform.SetParent(platform);
-            //y=0.249
         }
     }
 }
