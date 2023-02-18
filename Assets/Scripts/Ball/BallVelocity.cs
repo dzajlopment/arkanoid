@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using UnityEngine;
 
 public class BallVelocity : MonoBehaviour {
+    public static BallVelocity instance;
     [SerializeField] float ballSpeed = 5f;
     Rigidbody2D rb2d;
     AudioSource ballBounceSfx;
@@ -18,6 +19,7 @@ public class BallVelocity : MonoBehaviour {
     }
 
     private void Awake() {
+        instance = this;
         rb2d = GetComponent<Rigidbody2D>();
     }
 
