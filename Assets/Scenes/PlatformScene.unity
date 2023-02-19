@@ -6425,6 +6425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a0a24f697752648aba0c0388cd3062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1232474905}
+  platformObject: {fileID: 1751598965}
+  platform: {fileID: 1751598967}
 --- !u!1 &1234619745
 GameObject:
   m_ObjectHideFlags: 0
