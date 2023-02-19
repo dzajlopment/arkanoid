@@ -15,7 +15,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        Debug.LogError("Not implemented");
+        GameState.Init();
+        SceneManager.LoadScene("PlatformScene");
     }
     
     public void RunEditor()
