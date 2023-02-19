@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        GameState.Init();
         SceneManager.LoadScene("PlatformScene");
     }
     
