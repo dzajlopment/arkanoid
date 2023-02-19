@@ -27,9 +27,15 @@ public enum BrickColour {
 /// Contains position and colour of a single brick.
 /// </summary>
 public class BrickData {
-    BrickColour Colour;
-    int Left;
-    int Top;
+    BrickColour Colour { get; }
+    int Left { get; }
+    int Top { get; }
+
+    public BrickData(BrickColour colour, int left, int top) {
+        Colour = colour;
+        Left = left;
+        Top = top;
+    }
 }
 
 /// <summary>
@@ -57,10 +63,6 @@ public class Level {
     /// Contains data of all bricks in this level.
     /// </summary>
     public List<BrickData> Bricks { get; }
-
-    public Level() {
-        
-    }
 
     public Level(bool official, byte number, string name, Boosters boosters, List<BrickData> bricks) {
         Official = official;
