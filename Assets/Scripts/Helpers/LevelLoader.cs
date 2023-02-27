@@ -13,6 +13,24 @@ public static class LevelLoader {
     private static string Path = $"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}/zip-file/arkanoid";
 
     /// <summary>
+    /// Save level to disk.
+    /// </summary>
+    public static void SaveLevel(Level level) {
+        FileStream fs = new FileStream($"{Path}/levels/{level.Name.ToLower()}", FileMode.OpenOrCreate);
+        BinaryWriter writer = new BinaryWriter(fs);
+        writer.Write(level.Number);
+        writer.Write(level.Name);
+        writer.Write((int)level.Boosters);
+        writer.Write(level.Bricks.Count);
+        foreach (var i in level.Bricks) {
+            writer.Write((byte)i.Colour);
+            writer.Write(i.Left);
+            writer.Write(i.Top);
+        }
+        writer.Close();
+    }
+
+    /// <summary>
     /// Load level from byte array.
     /// </summary>
     private static Level LoadLevel(Stream stream) {

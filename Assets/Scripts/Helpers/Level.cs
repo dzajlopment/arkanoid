@@ -27,9 +27,9 @@ public enum BrickColour {
 /// Contains position and colour of a single brick.
 /// </summary>
 public class BrickData {
-    BrickColour Colour { get; }
-    int Left { get; }
-    int Top { get; }
+    public BrickColour Colour { get; }
+    public int Left { get; }
+    public int Top { get; }
 
     public BrickData(BrickColour colour, int left, int top) {
         Colour = colour;
