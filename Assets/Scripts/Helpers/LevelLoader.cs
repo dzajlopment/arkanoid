@@ -38,6 +38,7 @@ public static class LevelLoader {
         byte number = reader.ReadByte();
         String name = reader.ReadString();
         Boosters boosters = (Boosters)reader.ReadInt32();
+        int silverBrickValue = reader.ReadInt32();
         byte bcount = reader.ReadByte();
         List<BrickData> bricks = new List<BrickData>();
         for (int i = 0; i < bcount; i++) {
@@ -51,6 +52,7 @@ public static class LevelLoader {
             number,
             name,
             boosters,
+            silverBrickValue,
             bricks
         );
 

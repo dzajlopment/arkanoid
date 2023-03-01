@@ -6,8 +6,15 @@ using System.Collections.Generic;
 /// </summary>
 [Flags]
 public enum Boosters {
-    // TODO
-    Default = 1 << 31,
+    ExtraBalls      = 1,
+    WidePlatform    = 1 << 1,
+    Laser           = 1 << 2,
+    StrongBall      = 1 << 3,
+    ExtraLife       = 1 << 4,
+    CatchBall       = 1 << 5,
+    SkipLevel       = 1 << 6,
+    BottomBarrier   = 1 << 7,
+    Default         = 1 << 31,
 }
 
 public enum BrickColour {
@@ -60,15 +67,20 @@ public class Level {
     /// </summary>
     public Boosters Boosters { get; }
     /// <summary>
+    /// Determines score value of silver brick.
+    /// </summary>
+    public int SilverBrickValue { get; }
+    /// <summary>
     /// Contains data of all bricks in this level.
     /// </summary>
     public List<BrickData> Bricks { get; }
 
-    public Level(bool official, byte number, string name, Boosters boosters, List<BrickData> bricks) {
+    public Level(bool official, byte number, string name, Boosters boosters, int silverBrickValue, List<BrickData> bricks) {
         Official = official;
         Number = number;
         Name = name;
         Boosters = boosters;
+        SilverBrickValue = silverBrickValue;
         Bricks = bricks;
     }
 }
