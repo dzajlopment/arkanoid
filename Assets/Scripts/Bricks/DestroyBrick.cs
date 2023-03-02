@@ -13,6 +13,7 @@ public class DestroyBrick : MonoBehaviour{
         if(gameObject.name.StartsWith("truewhite--brick")){
             removeLife();
             if(trueSilverHp == 0){
+                ScoreSystem.instance.AddPoints(50); //50 * level
                 Destroy(gameObject);
             }
         }
