@@ -5,7 +5,7 @@ Jest to nasza wersja gry Arkanoid, stworzona w silniku Unity. Gra polega na nisz
 ## Proces budowania aplikacji
 Do zbudowania aplikacji potrzebne jest środowisko Unity, dostępne przez platformę Unity Hub. Unity Hub jest dostępne do pobrania za darmo pod [tym adresem](https://unity.com/download) (należy nacisnąć przycisk "Download for Windows"). Następnie należy uruchomić instalator. Po zaakceptowaniu umowy licencyjnej można wybrać folder docelowy instalacji Unity Hub, a następnie wcisnąć przycisk "Zainstaluj". Po uruchomieniu Unity Hub należy wejść w zakładkę "Installs" po lewej stronie. W prawym gónym rogu pojawi się przycisk "Add". Po naciśnięciu na niego, program poprosi nas o wybranie wersji Unity, którą chcemy zainstalować. Wybieramy wersję Unity 2021.3.13f1, następnie naciskamy przycisk "Next". W następnym menu możemy odznaczyć wszystkie opcje poza "Windows Build Support (IL2CPP)" oraz wcisnąć przycisk "Done". Rozpocznie się instalacja Unity.
 
-Po zainstalowaniu Unity należy wrócić do zakładki "Projects" (po lewej stronie). W prawym górnym rogu znajduje się przycisk "Add". Po wciśnięciu go program poprosi nas o wybranie folderu. Podajemy folder, w którym znajduje się kod źródłowy Panga. Na liście projektów pojawi się nowy projekt o nazwie "arkanoid". Otwieramy go przez kliknięcie.
+Po zainstalowaniu Unity należy wrócić do zakładki "Projects" (po lewej stronie). W prawym górnym rogu znajduje się przycisk "Add". Po wciśnięciu go program poprosi nas o wybranie folderu. Podajemy folder, w którym znajduje się kod źródłowy Arkanoida. Na liście projektów pojawi się nowy projekt o nazwie "arkanoid". Otwieramy go przez kliknięcie.
 
 Po otwarciu projektu wchodzimy w menu "File" widoczne w lewym górnym rogu, a następnie wybieramy "Build And Run". Alternatywnie można zastosować skrót klawiszowy **Ctrl + B**. Podajemy folder, do którego ma zostać zbudowana aplikacja. Po zbudowaniu, aplikacja uruchomi sie automatycznie. Plik wykonywalny o nazwie "arkanoid version 1.exe" znajdzie się w wybranym folderze.
 
@@ -33,7 +33,7 @@ Bloki występujące w grze:
 - Srebny - niezniszczalne
 - Złoty - niezniszczalne
 
-### Uplepszenia
+## Uplepszenia
 
 Na każdym z poziomów gracz po zniszczeniu bloku, ma szansę na trafienie kapsuły ulepszenia, którą będzie musiał złapać platformą. Ulepszenia będą dostępne tylko przez 1 rundę.
  
@@ -47,7 +47,7 @@ Na każdym z poziomów gracz po zniszczeniu bloku, ma szansę na trafienie kapsu
  - Anioł Stróż (na dole planszy pojawia się na 10 sekund bariera, przez którą piłki nie mogą wypaść poza planszę)
  - Super strzał (moc piłki zostaje zwiększona)
 
-### Platforma
+## Platforma
 Ważnym elementem gry jest platforma. Gracz potrafi sterować platformą za pomocą myszki, strzałek lub WSAD. Platforma ma za zadanie odbijanie piłki aby utrzymać ją w granicach planszy. W przypadku wypadnięcia piłki poza planszę, gracz traci jedno życie, piłka pojawia się z powrotem nieruchomo na platformie. Aby wznowić ruch piłki należy kliknąć spację. Platforma ma tryb bojowy (po złapaniu uplepszenia laserowego). Platforma w trybie bojowym zmienia swój wygląd oraz samoistnie strzela laserami, które nieszczą bloki.
 
 
