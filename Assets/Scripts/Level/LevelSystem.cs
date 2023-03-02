@@ -3,10 +3,10 @@ using UnityEngine;
 /// <summary>
 /// A class for managing currently played level.
 /// </summary>
-public class LevelSystem : MonoBehaviour {
-    public int Level { get; private set; } = 1;
+public static class LevelSystem {
+    public static int Level { get; private set; } = 1;
 
-    public void Advance() {
+    public static void Advance() {
         Level++;
     }
 }
