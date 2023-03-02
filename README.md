@@ -33,7 +33,7 @@ Bloki występujące w grze:
 - Srebny - niezniszczalne
 - Złoty - niezniszczalne
 
-## Uplepszenia
+## Ulepszenia
 
 Na każdym z poziomów gracz po zniszczeniu bloku, ma szansę na trafienie kapsuły ulepszenia, którą będzie musiał złapać platformą. Ulepszenia będą dostępne tylko przez 1 rundę.
  
