@@ -1,6 +1,6 @@
 # Arkanoid
 
-Jest to nasza wersja gry Arkanoid, stworzona w silniku Unity. Gra polega na niszczeniu kolorowych bloków za pomocą piłeczki odbijanej od platformy, sterowanej przez użytkownika. W skład gry wchodzą 32 poziomy + poziom specjalny oraz edytor poziomów .
+Jest to nasza wersja gry Arkanoid, stworzona w silniku Unity. Gra polega na niszczeniu kolorowych bloków za pomocą piłeczki odbijanej od platformy, sterowanej przez użytkownika. W skład gry wchodzą 32 poziomy + poziom specjalny oraz edytor poziomów.
 
 ## Proces budowania aplikacji
 Do zbudowania aplikacji potrzebne jest środowisko Unity, dostępne przez platformę Unity Hub. Unity Hub jest dostępne do pobrania za darmo pod [tym adresem](https://unity.com/download) (należy nacisnąć przycisk "Download for Windows"). Następnie należy uruchomić instalator. Po zaakceptowaniu umowy licencyjnej można wybrać folder docelowy instalacji Unity Hub, a następnie wcisnąć przycisk "Zainstaluj". Po uruchomieniu Unity Hub należy wejść w zakładkę "Installs" po lewej stronie. W prawym gónym rogu pojawi się przycisk "Add". Po naciśnięciu na niego, program poprosi nas o wybranie wersji Unity, którą chcemy zainstalować. Wybieramy wersję Unity 2021.3.13f1, następnie naciskamy przycisk "Next". W następnym menu możemy odznaczyć wszystkie opcje poza "Windows Build Support (IL2CPP)" oraz wcisnąć przycisk "Done". Rozpocznie się instalacja Unity.
