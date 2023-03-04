@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5869181080981385511}
   - component: {fileID: 5869181080981385508}
   - component: {fileID: 5869181080981385510}
+  - component: {fileID: 6974049947222108844}
   m_Layer: 0
   m_Name: truegold--brick
   m_TagString: Untagged
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &6974049947222108844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5869181080981385509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a90672dc8057b24da6317887b4a3690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
