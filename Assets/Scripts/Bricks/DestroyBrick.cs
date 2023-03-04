@@ -10,7 +10,6 @@ public class DestroyBrick : MonoBehaviour{
     }   
 
     void OnCollisionEnter2D(Collision2D collision) {
-        print(gameObject.name);
         if(gameObject.name.StartsWith("truewhite--brick")){
             removeLife();
             if(trueSilverHp == 0){
