@@ -8911,6 +8911,7 @@ GameObject:
   - component: {fileID: 1940551848}
   - component: {fileID: 1940551847}
   - component: {fileID: 1940551849}
+  - component: {fileID: 1940551850}
   m_Layer: 0
   m_Name: border-top (1)
   m_TagString: Untagged
@@ -9011,6 +9012,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.68, y: 0.28}
   m_EdgeRadius: 0
+--- !u!114 &1940551850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940551846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c5c94cef7d4a24cb56ad159d359dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1985079449
 GameObject:
   m_ObjectHideFlags: 0
@@ -9302,6 +9315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24090b66673c8f44eb13c586f2002ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  src: {fileID: 2036504307}
+  ballBounce: {fileID: 8300000, guid: e8e3c179d48012b438a87d772b0055ab, type: 3}
+  destroyedBrick: {fileID: 8300000, guid: 99d2aaf3bac38484c8273cd9810f18b7, type: 3}
+  goldBlockHit: {fileID: 8300000, guid: 7e1e1aa4fa2e7b14d8a92a392c7947b8, type: 3}
 --- !u!82 &2036504303
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9494,6 +9511,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &2036504307 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6506120454566058864, guid: ece1fd3e8d4e68e43bec80ec09287a96, type: 3}
+  m_PrefabInstance: {fileID: 6506120455788038224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2038136868
 GameObject:
   m_ObjectHideFlags: 0
