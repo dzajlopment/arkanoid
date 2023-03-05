@@ -64,7 +64,7 @@ public static class LevelLoader {
     /// Load official level with specified `number`.
     /// </summary>
     public static Level LoadOfficialLevel(int number) {
-        var file = Resources.Load<TextAsset>($"Assets/Levels/level{number}");
+        var file = Resources.Load<TextAsset>($"Levels/level{number}");
         return LoadLevel(new MemoryStream(file.bytes));
     }
 
