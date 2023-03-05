@@ -32,7 +32,6 @@ public class DestroyBrick : MonoBehaviour{
 
         //every colorful brick
         else {
-            print(gameObject.name);
             Sound.instance.playDestroyedBrickSound();
             Destroy(gameObject);
         }
