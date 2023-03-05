@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Powerup
+  - Platform
+  - Ball
   layers:
   - Default
   - TransparentFX
@@ -11,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Platform
   - 
   - 
   - 

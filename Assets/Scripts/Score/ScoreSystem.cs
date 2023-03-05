@@ -25,5 +25,8 @@ public class ScoreSystem : MonoBehaviour {
     public void AddPoints(int points){
         score+=points;
         refreshScoreText();
+        if(score >= 100 && Powerups.areEnoughPoints == false){
+            Powerups.areEnoughPoints = true;
+        }
     }
 }
