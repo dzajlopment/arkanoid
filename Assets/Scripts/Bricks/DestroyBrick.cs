@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class DestroyBrick : MonoBehaviour{
-    int trueSilverHp = 2;  //1 + (level / 8)
+    int trueSilverHp = 2;  //2 + (level / 8)
 
     void removeLife(){
         trueSilverHp--;
     }   
 
     void OnCollisionEnter2D(Collision2D collision) {
+
         if(gameObject.name.StartsWith("truewhite--brick")){
+        //remove one hp from truewhite--brick
             removeLife();
             if(trueSilverHp == 0){
                 ScoreSystem.instance.AddPoints(50); //50 * level
@@ -22,11 +25,14 @@ public class DestroyBrick : MonoBehaviour{
             }
         }
 
+        //check if brick is truegold--brick
         else if(gameObject.name.StartsWith("truegold--brick")){
             Sound.instance.playGoldBlockHitSound();
         }
 
+        //every colorful brick
         else {
+            print(gameObject.name);
             Sound.instance.playDestroyedBrickSound();
             Destroy(gameObject);
         }
