@@ -71,6 +71,7 @@ public class PowerupCapsule : MonoBehaviour
         Powerups.instance.interruptGuard();
         Powerups.instance.shortPlatform();
         Powerups.instance.laserDisabled();
+        FindObjectOfType<BallFall>().gameObject.gameObject.GetComponent<SpriteRenderer>().sprite = Powerups.instance.normalBall;
         Powerups.instance.isBallPowerful = false;
     }
 
@@ -105,6 +106,7 @@ public class PowerupCapsule : MonoBehaviour
                 case 5:
                     resetPowerups();
                     Powerups.instance.isBallPowerful = true;
+                    FindObjectOfType<BallFall>().gameObject.gameObject.GetComponent<SpriteRenderer>().sprite = Powerups.instance.fireBall;
                     break;
                 case 6:
                     resetPowerups();
@@ -126,6 +128,7 @@ public class PowerupCapsule : MonoBehaviour
     {
         if(gameObject.transform.position.y < -5)
         {
+            Powerups.instance.refreshCapsule();
             Destroy(gameObject);
         }
     }

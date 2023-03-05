@@ -17,9 +17,12 @@ public class Powerups : MonoBehaviour
     public Sprite normalPlatform; // holds platform states
     public Sprite warPlatform;
 
+    public Sprite normalBall; // holds ball states
+    public Sprite fireBall;
+
     public bool isBallPowerful;
 
-    private Platform platform; //holds reference to the main platform
+    public Platform platform; //holds reference to the main platform
     private GameObject guard; //holds the right guardian shield
     
     // Start is called before the first frame update
@@ -32,7 +35,7 @@ public class Powerups : MonoBehaviour
         guard = Instantiate(guardian);
         guard.SetActive(false);
         platform = FindObjectOfType<Platform>();
-        //guard.transform.position = new Vector2();
+        Debug.Log(Application.persistentDataPath);
     }
 
     public void enableGuard()
@@ -97,7 +100,8 @@ public class Powerups : MonoBehaviour
         shortPlatform();
         laserDisabled();
         isBallPowerful = false;
-        if(FindObjectOfType<PowerupCapsule>() != null)
+        FindObjectOfType<BallFall>().gameObject.gameObject.GetComponent<SpriteRenderer>().sprite = Powerups.instance.normalBall;
+        if (FindObjectOfType<PowerupCapsule>() != null)
         {
             Destroy(FindObjectOfType<PowerupCapsule>().gameObject);
         }
