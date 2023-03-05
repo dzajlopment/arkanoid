@@ -50,4 +50,11 @@ Na każdym z poziomów gracz po zniszczeniu bloku, ma szansę na trafienie kapsu
 ## Platforma
 Ważnym elementem gry jest platforma. Gracz potrafi sterować platformą za pomocą myszki, strzałek lub AD. Platforma ma za zadanie odbijanie piłki aby utrzymać ją w granicach planszy. W przypadku wypadnięcia piłki poza planszę, gracz traci jedno życie, piłka pojawia się z powrotem nieruchomo na platformie. Aby wznowić ruch piłki należy kliknąć spację. Platforma ma tryb bojowy (po złapaniu uplepszenia laserowego). Platforma w trybie bojowym zmienia swój wygląd oraz samoistnie strzela laserami, które niszczą bloki i odbijają piłkę.
 
+## Level Editor
+https://github.com/Lord-Prinz-Team/leveleditor
 
+Level Editor został zaimplementowany w NEXT.JS za pomocą web socketów. Ekran jest podzielony na planszę gry oraz zasobnik. Z zasobnika można wybierać bloki i przenosić je na planszę. Zmiany są zapisywane po 10 sekundach, wysyłane i zapisywane do pliku binarnego.
+
+Aby otworzyć level editor potrzebna jest jedna z najnowszych przegądarek internetowych oraz zainstalowane środowisko node na komputerze.
+
+Aby uruchomić aplikację należy w folderze z aplikacją należy napisać `npm run dev`.
