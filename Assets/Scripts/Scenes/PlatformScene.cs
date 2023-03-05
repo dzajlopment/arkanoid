@@ -22,61 +22,60 @@ public class PlatformScene : MonoBehaviour {
         RefreshLevel();
     }
 
-    void RefreshLevel() {
+    void RefreshLevel()
+    {
         level = LevelLoader.LoadOfficialLevel(GameManager.Instance.Level);
-        foreach (var brick in level.Bricks) {
-            GameObject obj;
-            // FIXME: this code is just bad
-            switch (brick.Colour) {
-                case BrickColour.White:
-                    obj = Instantiate(BrickWhite, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.WhiteBricks++;
-                    break;
-                case BrickColour.Orange:
-                    obj = Instantiate(BrickOrange, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.OrangeBricks++;
-                    break;
-                case BrickColour.LightBlue:
-                    obj = Instantiate(BrickLightBlue, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.LightBlueBricks++;
-                    break;
-                case BrickColour.Green:
-                    obj = Instantiate(BrickGreen, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.GreenBricks++;
-                    break;
-                case BrickColour.Red:
-                    obj = Instantiate(BrickRed, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.RedBricks++;
-                    break;
-                case BrickColour.Blue:
-                    obj = Instantiate(BrickBlue, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.BlueBricks++;
-                    break;
-                case BrickColour.Purple:
-                    obj = Instantiate(BrickPurple, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.PurpleBricks++;
-                    break;
-                case BrickColour.Yellow:
-                    obj = Instantiate(BrickYellow, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.YellowBricks++;
-                    break;
-                case BrickColour.Silver:
-                    obj = Instantiate(BrickSilver, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    GameManager.Instance.SilverBricks++;
-                    break;
-                case BrickColour.Gold:
-                    obj = Instantiate(BrickGold, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
-                    obj.transform.SetParent(BrickHolder.transform);
-                    break;
+        Dictionary<BrickColour, GameObject> brickPrefabs = new Dictionary<BrickColour, GameObject> {
+        { BrickColour.White, BrickWhite },
+        { BrickColour.Orange, BrickOrange },
+        { BrickColour.LightBlue, BrickLightBlue },
+        { BrickColour.Green, BrickGreen },
+        { BrickColour.Red, BrickRed },
+        { BrickColour.Blue, BrickBlue },
+        { BrickColour.Purple, BrickPurple },
+        { BrickColour.Yellow, BrickYellow },
+        { BrickColour.Silver, BrickSilver },
+        { BrickColour.Gold, BrickGold }
+    };
+
+        foreach (var brick in level.Bricks)
+        {
+            GameObject prefab;
+            if (brickPrefabs.TryGetValue(brick.Colour, out prefab))
+            {
+                GameObject obj = Instantiate(prefab, new Vector3(brick.Left / 1000.0f, brick.Top / 1000.0f, 0), Quaternion.identity);
+                obj.transform.SetParent(BrickHolder.transform);
+
+                switch (brick.Colour)
+                {
+                    case BrickColour.White:
+                        GameManager.Instance.WhiteBricks++;
+                        break;
+                    case BrickColour.Orange:
+                        GameManager.Instance.OrangeBricks++;
+                        break;
+                    case BrickColour.LightBlue:
+                        GameManager.Instance.LightBlueBricks++;
+                        break;
+                    case BrickColour.Green:
+                        GameManager.Instance.GreenBricks++;
+                        break;
+                    case BrickColour.Red:
+                        GameManager.Instance.RedBricks++;
+                        break;
+                    case BrickColour.Blue:
+                        GameManager.Instance.BlueBricks++;
+                        break;
+                    case BrickColour.Purple:
+                        GameManager.Instance.PurpleBricks++;
+                        break;
+                    case BrickColour.Yellow:
+                        GameManager.Instance.YellowBricks++;
+                        break;
+                    case BrickColour.Silver:
+                        GameManager.Instance.SilverBricks++;
+                        break;
+                }
             }
         }
     }

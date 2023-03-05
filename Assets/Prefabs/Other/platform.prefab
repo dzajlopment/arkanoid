@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6506120454044995369}
   - component: {fileID: 6506120454044995368}
   - component: {fileID: 6506120454044995370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,10 +81,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 0.64, y: 0.16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_AdaptiveModeThreshold: 0.507
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
@@ -107,9 +107,9 @@ BoxCollider2D:
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.64, y: 0.16}
     newSize: {x: 0.64, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
+    adaptiveTilingThreshold: 0.507
+    drawMode: 2
+    adaptiveTiling: 1
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.16}
@@ -164,9 +164,11 @@ GameObject:
   - component: {fileID: 6506120454566058831}
   - component: {fileID: 6506120454566058864}
   - component: {fileID: 6506120454566058865}
+  - component: {fileID: 4667971394999436426}
+  - component: {fileID: 1916937161257375306}
   m_Layer: 0
   m_Name: ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,3 +401,35 @@ MonoBehaviour:
   ball: {fileID: 6506120454566058825}
   platformObject: {fileID: 6506120454044995365}
   platform: {fileID: 6506120454044995367}
+--- !u!58 &4667971394999436426
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506120454566058825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.18
+--- !u!114 &1916937161257375306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506120454566058825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24090b66673c8f44eb13c586f2002ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 6506120454566058864}
+  ballBounce: {fileID: 8300000, guid: e8e3c179d48012b438a87d772b0055ab, type: 3}
+  destroyedBrick: {fileID: 8300000, guid: 99d2aaf3bac38484c8273cd9810f18b7, type: 3}
+  goldBlockHit: {fileID: 8300000, guid: 7e1e1aa4fa2e7b14d8a92a392c7947b8, type: 3}

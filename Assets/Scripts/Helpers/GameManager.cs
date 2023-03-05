@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 /// <summary>
 /// A class for managing game state.
@@ -81,6 +82,11 @@ public class GameManager : MonoBehaviour {
             AddLife();
             Counter = Score / 60000;
         }
+
+        if (Score >= 500 && Powerups.areEnoughPoints == false)
+        {
+            Powerups.areEnoughPoints = true;
+        }
     }
 
     public void OnBrickDestroyed(BrickColour colour) {
@@ -132,8 +138,8 @@ public class GameManager : MonoBehaviour {
             YellowBricks == 0 &&
             SilverBricks == 0
         ) {
-            Debug.Log("all bricks");
-            GameManager.Instance.AdvanceLevel();
+            //Debug.Log("all bricks");
+            AdvanceLevel();
             OnLevelCleared.Invoke();
         }
     }

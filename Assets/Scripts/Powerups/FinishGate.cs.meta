@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 5a90672dc8057b24da6317887b4a3690
+guid: 13326e2c09a89ae44b1f359dc0157238
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - powerupCapsule: {fileID: 7845790073819048278, guid: 44d2a285cd95eb54eb3f25a2b4a07303, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
