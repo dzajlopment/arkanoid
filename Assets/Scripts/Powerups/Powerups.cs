@@ -25,6 +25,7 @@ public class Powerups : MonoBehaviour
     public Platform platform; //holds reference to the main platform
     private GameObject guard; //holds the right guardian shield
     
+
     // Start is called before the first frame update
     void Start()
     {                   //this sets up all needed objects and variables at the start of the level
@@ -117,6 +118,11 @@ public class Powerups : MonoBehaviour
     {
         Debug.Log("res");
         Invoke("hardRefresh", 6f);
+    }
+
+    public void catchBall(){
+        // BallVelocity.instance.Catch(platform.transform);
+        BallVelocity.instance.hasCatchBallPowerup = true;
     }
 
     // Update is called once per frame

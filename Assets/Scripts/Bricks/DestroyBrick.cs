@@ -16,6 +16,8 @@ public class DestroyBrick : MonoBehaviour{
         trueSilverHp = 2 + GameManager.Instance.Level / 8;
     }
 
+    // public VideoPlayer videoPlayer;
+
     void removeLife(){
         trueSilverHp--;
     }
@@ -97,6 +99,8 @@ public class DestroyBrick : MonoBehaviour{
             }
 
             Sound.instance.playDestroyedBrickSound();
+            // videoPlayer.Play();
+            // Destroy(gameObject, 0.3f);
             Destroy(gameObject);
         }
         OnBrickDestroyed.Invoke(Colour);

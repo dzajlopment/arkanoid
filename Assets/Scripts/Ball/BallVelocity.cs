@@ -7,6 +7,8 @@ public class BallVelocity : MonoBehaviour {
     public static BallVelocity instance;
     [SerializeField] float ballSpeed = 5f;
     Rigidbody2D rb2d;
+    public bool hasCatchBallPowerup = false;
+    Platform platform;
     float hitAspect(Vector2 ballPosition, Vector2 racketPosition, float platformWidth) {
         return (ballPosition.x - racketPosition.x) / platformWidth;        
     }
@@ -19,6 +21,7 @@ public class BallVelocity : MonoBehaviour {
     private void Awake() {
         instance = this;
         rb2d = GetComponent<Rigidbody2D>();
+        platform = FindObjectOfType<Platform>();
     }
 
     //launch the ball in the beginning of the level or if life's lost
@@ -36,6 +39,10 @@ public class BallVelocity : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "platform") {
+            if(hasCatchBallPowerup){
+                Catch(platform.transform);
+                hasCatchBallPowerup = false;
+            }
             float aspect = hitAspect(transform.position, collision.transform.position, collision.collider.bounds.size.x);
             Vector2 direction = new Vector2(aspect, 1).normalized;
             GetComponent<Rigidbody2D>().velocity = direction * ballSpeed;

@@ -99,7 +99,7 @@ public class PowerupCapsule : MonoBehaviour
                     break;
                 case 4:
                     resetPowerups();
-
+                    Powerups.instance.catchBall();
 
 
                     break;
