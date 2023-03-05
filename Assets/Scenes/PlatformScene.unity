@@ -2826,6 +2826,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89d94d7abac804c418bb535f439a5ac9, type: 3}
+--- !u!1 &654523908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6773973071967374823, guid: 2ee59a842db8b0b419957d3c17a38d02, type: 3}
+  m_PrefabInstance: {fileID: 1384405485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!328 &654523914
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654523908}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 40c981444eeb2f54d8f9952d779e0994, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!114 &654523915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654523908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeae0be021ca575489041c3d416d3d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &674900991
 GameObject:
   m_ObjectHideFlags: 0
@@ -5892,6 +5942,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6773973071967374820, guid: 2ee59a842db8b0b419957d3c17a38d02, type: 3}
+      propertyPath: videoPlayer
+      value: 
+      objectReference: {fileID: 654523914}
     - target: {fileID: 6773973071967374823, guid: 2ee59a842db8b0b419957d3c17a38d02, type: 3}
       propertyPath: m_Name
       value: brick--purple

@@ -6,6 +6,8 @@ using UnityEngine.Video;
 public class DestroyBrick : MonoBehaviour{
     int trueSilverHp = 2;  //2 + (level / 8)
 
+    // public VideoPlayer videoPlayer;
+
     void removeLife(){
         trueSilverHp--;
     }   
@@ -33,6 +35,8 @@ public class DestroyBrick : MonoBehaviour{
         //every colorful brick
         else {
             Sound.instance.playDestroyedBrickSound();
+            // videoPlayer.Play();
+            // Destroy(gameObject, 0.3f);
             Destroy(gameObject);
         }
     }
