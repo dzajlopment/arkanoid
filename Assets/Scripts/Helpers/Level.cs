@@ -45,24 +45,28 @@ public class Level {
     /// <summary>
     /// Determines if this is official level.
     /// </summary>
-    public bool Official { get; }
+    public bool Official;
+
     /// <summary>
     /// Level number. Applies only for official levels.
     /// Equals to 0 for custom level.
     /// </summary>
-    public byte Number { get; }
+    public byte Number;
+
     /// <summary>
     /// Level name.
     /// </summary>
-    public string Name { get; }
+    public string Name;
+
     /// <summary>
     /// Determines boosters available in this level.
     /// </summary>
-    public Boosters Boosters { get; }
+    public Boosters Boosters;
+
     /// <summary>
     /// Contains data of all bricks in this level.
     /// </summary>
-    public List<BrickData> Bricks { get; }
+    public List<BrickData> Bricks;
 
     public Level(bool official, byte number, string name, Boosters boosters, List<BrickData> bricks) {
         Official = official;
