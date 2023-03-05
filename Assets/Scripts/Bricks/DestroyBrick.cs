@@ -11,14 +11,23 @@ public class DestroyBrick : MonoBehaviour{
     int trueSilverHp = 1;
 
     void Awake() {
+        //check
+        if (GameManager.Instance == null)
+        {
+            Debug.Log("RUCHANIE");
+        }
         trueSilverHp = GameManager.Instance.Level / 8;
+        Debug.Log(trueSilverHp);
     }
 
     void removeLife(){
         trueSilverHp--;
     }
 
+    public GameObject powerupCapsule; //for spawning of powerup capsules
+
     void OnCollisionEnter2D(Collision2D collision) {
+
 
         if(gameObject.name.StartsWith("truewhite--brick")){
         //remove one hp from truewhite--brick
@@ -40,6 +49,13 @@ public class DestroyBrick : MonoBehaviour{
 
         //every colorful brick
         else {
+            if (Powerups.shouldPowerupSpawn && Powerups.areEnoughPoints)
+            {
+                GameObject capsule = Instantiate(powerupCapsule, gameObject.transform);
+                capsule.transform.parent = gameObject.transform.parent;
+                capsule.transform.position = new Vector2(capsule.transform.position.x + 4.48f, transform.position.y);
+            }
+
             Sound.instance.playDestroyedBrickSound();
             Destroy(gameObject);
         }

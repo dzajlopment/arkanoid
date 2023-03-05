@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6396465009383416624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6396465009383416631}
+  - component: {fileID: 6396465008617602498}
+  m_Layer: 0
+  m_Name: Bricks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6396465009383416631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396465009383416624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2965791, y: -0.029356355, z: -9.104336}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6396465008617602498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6396465009383416624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507b3bf1dbc21823bbd18e45b172456e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BrickHolder: {fileID: 6396465009383416624}
+  BrickBlue: {fileID: 6759046515033960800, guid: 8ca1ef4eb15940847868f1357469d5d9, type: 3}
+  BrickGold: {fileID: 8964277972556096775, guid: 9eba7e25a71683c46a672955aeb467b6, type: 3}
+  BrickGreen: {fileID: 5535934851136959320, guid: 689bdd99b1c468944bf281d75af2dad3, type: 3}
+  BrickLightBlue: {fileID: 3222979340622693187, guid: f02330c5e4b8d114381b42a23cef74d5, type: 3}
+  BrickOrange: {fileID: 618461344541512156, guid: 057959149a1d0c448a26f2ee479dfbdc, type: 3}
+  BrickPurple: {fileID: 6773973071967374823, guid: 2ee59a842db8b0b419957d3c17a38d02, type: 3}
+  BrickRed: {fileID: 5216139971105476726, guid: e553461be73f06344b0811d5bce7f814, type: 3}
+  BrickSilver: {fileID: 7276325133095459604, guid: 8e05fa3260cf2ab4c8f043d5358c8576, type: 3}
+  BrickWhite: {fileID: 8985489364390693318, guid: 03ea9cd3fe5c12b4a924f55ad69397ae, type: 3}
+  BrickYellow: {fileID: 6186674123187880919, guid: 89d94d7abac804c418bb535f439a5ac9, type: 3}

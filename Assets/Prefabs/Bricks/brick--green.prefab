@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour: 3
+  powerupCapsule: {fileID: 7845790073819048278, guid: 44d2a285cd95eb54eb3f25a2b4a07303, type: 3}
