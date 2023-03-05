@@ -11,7 +11,7 @@ public class DestroyBrick : MonoBehaviour{
     int trueSilverHp = 1;
 
     void Awake() {
-        trueSilverHp = GameManager.Instance.Level / 8;
+        trueSilverHp = 2 + GameManager.Instance.Level / 8;
     }
 
     void removeLife(){
@@ -26,6 +26,7 @@ public class DestroyBrick : MonoBehaviour{
             if(trueSilverHp == 0){
                 GameManager.Instance.AddPoints(50 * GameManager.Instance.Level);
                 Sound.instance.playDestroyedBrickSound();
+                GameManager.Instance.SilverBricks--;
                 Destroy(gameObject);
             }
             else{

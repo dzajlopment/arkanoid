@@ -619,13 +619,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BrickHolder: {fileID: 1282409851}
   BrickBlue: {fileID: 6759046515033960800, guid: 8ca1ef4eb15940847868f1357469d5d9, type: 3}
-  BrickGold: {fileID: 0}
+  BrickGold: {fileID: 8964277972556096775, guid: 9eba7e25a71683c46a672955aeb467b6, type: 3}
   BrickGreen: {fileID: 5535934851136959320, guid: 689bdd99b1c468944bf281d75af2dad3, type: 3}
   BrickLightBlue: {fileID: 3222979340622693187, guid: f02330c5e4b8d114381b42a23cef74d5, type: 3}
-  BrickOrange: {fileID: 0}
+  BrickOrange: {fileID: 618461344541512156, guid: 057959149a1d0c448a26f2ee479dfbdc, type: 3}
   BrickPurple: {fileID: 6773973071967374823, guid: 2ee59a842db8b0b419957d3c17a38d02, type: 3}
   BrickRed: {fileID: 5216139971105476726, guid: e553461be73f06344b0811d5bce7f814, type: 3}
-  BrickSilver: {fileID: 0}
+  BrickSilver: {fileID: 7276325133095459604, guid: 8e05fa3260cf2ab4c8f043d5358c8576, type: 3}
   BrickWhite: {fileID: 8985489364390693318, guid: 03ea9cd3fe5c12b4a924f55ad69397ae, type: 3}
   BrickYellow: {fileID: 6186674123187880919, guid: 89d94d7abac804c418bb535f439a5ac9, type: 3}
 --- !u!1 &1940551846
@@ -1149,6 +1149,15 @@ MonoBehaviour:
   ScoreText: {fileID: 1387951001229724469}
   Level: 1
   Lifes: 3
+  BlueBricks: 0
+  GreenBricks: 0
+  LightBlueBricks: 0
+  OrangeBricks: 0
+  PurpleBricks: 0
+  RedBricks: 0
+  SilverBricks: 0
+  WhiteBricks: 0
+  YellowBricks: 0
 --- !u!1001 &1644643682810659918
 PrefabInstance:
   m_ObjectHideFlags: 0

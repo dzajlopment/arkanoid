@@ -118,8 +118,6 @@ public class GameManager : MonoBehaviour {
                 YellowBricks--;
                 break;
             case BrickColour.Silver:
-                SilverBricks--;
-                break;
             case BrickColour.Gold:
                 break;
         }
