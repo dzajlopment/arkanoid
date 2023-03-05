@@ -12,16 +12,8 @@ public class BallFall : MonoBehaviour
     Vector2 ballOnPlatformPosition;
     int lifes;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.name.Length <= 5)
-        {
-            return;
-        }
-        if (Powerups.instance.isBallPowerful && collision.name.Substring(0, 6) == "brick-")
-        {
-            Destroy(collision.gameObject);
-        }
+    void Awake() {
+        GameManager.OnLevelCleared += RefreshPlatform;
     }
 
     // Update is called once per frame
@@ -40,11 +32,14 @@ public class BallFall : MonoBehaviour
                 return;
             }
 
-            //Move the ball on platform
-            platformPositionX = platform.transform.position.x;
-            BallVelocity.instance.Catch(platform);
-            ballOnPlatformPosition = new Vector2(platformPositionX, (float)-3.88);
-            transform.position = ballOnPlatformPosition;
+            RefreshPlatform();
         }
+    }
+
+    void RefreshPlatform() {
+        platformPositionX = platform.transform.position.x;
+        BallVelocity.instance.Catch(platform);
+        ballOnPlatformPosition = new Vector2(platformPositionX, (float)-3.88);
+        transform.position = ballOnPlatformPosition;
     }
 }

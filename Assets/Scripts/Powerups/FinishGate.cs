@@ -14,8 +14,9 @@ public class FinishGate : MonoBehaviour
     {
         if (collision.CompareTag("Platform"))
         {
-            // GO TO NEXT LEVEL SHIT
-            Debug.Log("Level over");
+            GameManager.Instance.AdvanceLevel();
+            GameManager.InvokeEvent();
+            Destroy(gameObject);
         }
     }
 

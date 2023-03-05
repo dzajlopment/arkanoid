@@ -124,6 +124,9 @@ public class GameManager : MonoBehaviour {
                 YellowBricks--;
                 break;
             case BrickColour.Silver:
+                Debug.Log("SRANIE");
+                Debug.Log(SilverBricks);
+                break;
             case BrickColour.Gold:
                 break;
         }
@@ -138,9 +141,14 @@ public class GameManager : MonoBehaviour {
             YellowBricks == 0 &&
             SilverBricks == 0
         ) {
-            //Debug.Log("all bricks");
+            Debug.Log("all bricks");
+            Debug.Log(WhiteBricks);
             AdvanceLevel();
-            OnLevelCleared.Invoke();
+            InvokeEvent();
         }
+    }
+
+    public static void InvokeEvent() {
+        OnLevelCleared.Invoke();
     }
 }

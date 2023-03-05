@@ -24,7 +24,7 @@ public class PowerupCapsule : MonoBehaviour
     void Start()
     {
         Powerups.shouldPowerupSpawn = false;
-        //PowerUp = 7; //testing purposes
+        // PowerUp = 7; //testing purposes
         PowerUp = Random.Range(1, 8); //randomise which powerup is dropped
         switch (PowerUp)
         {

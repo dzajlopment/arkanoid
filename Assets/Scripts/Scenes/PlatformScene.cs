@@ -24,6 +24,9 @@ public class PlatformScene : MonoBehaviour {
 
     void RefreshLevel()
     {
+        for (int i = 0; i < BrickHolder.transform.childCount; i++) {
+            Destroy(BrickHolder.transform.GetChild(i).gameObject);
+        }
         level = LevelLoader.LoadOfficialLevel(GameManager.Instance.Level);
         Dictionary<BrickColour, GameObject> brickPrefabs = new Dictionary<BrickColour, GameObject> {
         { BrickColour.White, BrickWhite },
@@ -37,7 +40,7 @@ public class PlatformScene : MonoBehaviour {
         { BrickColour.Silver, BrickSilver },
         { BrickColour.Gold, BrickGold }
     };
-
+        Debug.Log("AAAA");
         foreach (var brick in level.Bricks)
         {
             GameObject prefab;

@@ -77,7 +77,7 @@ public class Powerups : MonoBehaviour
     public void laserEnabled()
     {
         platform.GetComponent<SpriteRenderer>().sprite = warPlatform;
-        InvokeRepeating("makeLaser", 0f, 1.5f);
+        InvokeRepeating("makeLaser", 0f, 1f);
     }
 
     public void laserDisabled()

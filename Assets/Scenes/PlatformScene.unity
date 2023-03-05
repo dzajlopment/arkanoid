@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifesText: {fileID: 1387951001229724470}
   ScoreText: {fileID: 1387951001229724469}
-  Level: 1
+  Level: 3
   Lifes: 3
   BlueBricks: 0
   GreenBricks: 0
