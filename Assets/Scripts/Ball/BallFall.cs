@@ -18,8 +18,8 @@ public class BallFall : MonoBehaviour
         ballPositionY = transform.position.y;
         
         if(ballPositionY < -6){
-            LifesSystem.instance.removeLife();
-            lifes = LifesSystem.instance.lifes;
+            GameManager.Instance.RemoveLife();
+            lifes = GameManager.Instance.Lifes;
 
             //Delete the ball and platform on 0 lifes
             if(lifes == 0){
