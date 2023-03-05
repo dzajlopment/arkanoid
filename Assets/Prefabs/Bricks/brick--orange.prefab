@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 618461344541512160}
   - component: {fileID: 618461344541512161}
   - component: {fileID: 618461344541512158}
-  - component: {fileID: 618461344541512159}
   m_Layer: 0
   m_Name: brick--orange
   m_TagString: Untagged
@@ -125,15 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a90672dc8057b24da6317887b4a3690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &618461344541512159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 618461344541512156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30512fcf8051fdd41b490f6b1380a355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Colour: 1
+  powerupCapsule: {fileID: 7845790073819048278, guid: 44d2a285cd95eb54eb3f25a2b4a07303, type: 3}

@@ -35,19 +35,19 @@ Bloki występujące w grze:
 
 ## Ulepszenia
 
-Na każdym z poziomów gracz po zniszczeniu bloku, ma szansę na trafienie kapsuły ulepszenia, którą będzie musiał złapać platformą. Ulepszenia będą dostępne tylko przez 1 rundę.
+Na każdym z poziomów gracz po zniszczeniu bloku, ma szansę na trafienie kapsuły ulepszenia, którą będzie musiał złapać platformą. Ulepszenia będą dostępne tylko przez 1 rundę, do utraty piłki lub podniesienia innego ulepszenia.
  
  Dostępne ulepszenia w grze:
  - Dodatkowe życie (gracz zyskuje dodatkowe życie)
  - Lepek (piłka za każdym razem gdy spadnie na platformę, zostanie do niej przyklejona. Gracz może wystrzelić tę piłkę za pomocą spacji)
- - Laser (platforma gracza zmienia styl na platformę bojową. Z dział platformy będą samoistnie wystrzeliwywane lasery, które potrafią niszczyć bloki)
- - Drzwi (gracz może niezwłocznie przejść do następnego poziomu)
+ - Laser (platforma gracza zmienia styl na platformę bojową. Z dział platformy będą samoistnie wystrzeliwywane lasery, które potrafią niszczyć bloki i odbijać piłkę)
+ - Drzwi (na bokach poziomu pojawiają się drzwi, w które gracz może wejść platformą aby przejść na następny poziom)
  - Rozciągacz (platforma gracza staje się szersza)
- - Dodatkowa piłka (gracz dostaje dodatkową piłkę)
+ - Dodatkowa piłka (gracz dostaje dodatkową piłkę) (NIEDOSTĘPNE)
  - Anioł Stróż (na dole planszy pojawia się na 10 sekund bariera, przez którą piłki nie mogą wypaść poza planszę)
- - Super strzał (moc piłki zostaje zwiększona)
+ - Super strzał (moc piłki zostaje zwiększona przez gorącą aurę wokół niej)
 
 ## Platforma
-Ważnym elementem gry jest platforma. Gracz potrafi sterować platformą za pomocą myszki, strzałek lub AD. Platforma ma za zadanie odbijanie piłki aby utrzymać ją w granicach planszy. W przypadku wypadnięcia piłki poza planszę, gracz traci jedno życie, piłka pojawia się z powrotem nieruchomo na platformie. Aby wznowić ruch piłki należy kliknąć spację. Platforma ma tryb bojowy (po złapaniu uplepszenia laserowego). Platforma w trybie bojowym zmienia swój wygląd oraz samoistnie strzela laserami, które niszczą bloki.
+Ważnym elementem gry jest platforma. Gracz potrafi sterować platformą za pomocą myszki, strzałek lub AD. Platforma ma za zadanie odbijanie piłki aby utrzymać ją w granicach planszy. W przypadku wypadnięcia piłki poza planszę, gracz traci jedno życie, piłka pojawia się z powrotem nieruchomo na platformie. Aby wznowić ruch piłki należy kliknąć spację. Platforma ma tryb bojowy (po złapaniu uplepszenia laserowego). Platforma w trybie bojowym zmienia swój wygląd oraz samoistnie strzela laserami, które niszczą bloki i odbijają piłkę.
 
 

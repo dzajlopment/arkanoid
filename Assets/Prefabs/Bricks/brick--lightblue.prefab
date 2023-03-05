@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3222979340622693190}
   - component: {fileID: 3222979340622693185}
   - component: {fileID: 3222979340622693184}
-  - component: {fileID: 3222979340622693188}
   m_Layer: 0
   m_Name: brick--lightblue
   m_TagString: Untagged
@@ -125,15 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a90672dc8057b24da6317887b4a3690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3222979340622693188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3222979340622693187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4e1008d38f164419f7d8155061eb80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Colour: 2
+  powerupCapsule: {fileID: 7845790073819048278, guid: 44d2a285cd95eb54eb3f25a2b4a07303, type: 3}
