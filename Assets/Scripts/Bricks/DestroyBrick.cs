@@ -19,7 +19,9 @@ public class DestroyBrick : MonoBehaviour{
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+
         if(gameObject.name.StartsWith("truewhite--brick")){
+        //remove one hp from truewhite--brick
             removeLife();
             if(trueSilverHp == 0){
                 GameManager.Instance.AddPoints(50 * GameManager.Instance.Level);
@@ -31,10 +33,12 @@ public class DestroyBrick : MonoBehaviour{
             }
         }
 
+        //check if brick is truegold--brick
         else if(gameObject.name.StartsWith("truegold--brick")){
             Sound.instance.playGoldBlockHitSound();
         }
 
+        //every colorful brick
         else {
             Sound.instance.playDestroyedBrickSound();
             Destroy(gameObject);
