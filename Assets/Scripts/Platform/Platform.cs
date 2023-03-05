@@ -52,4 +52,8 @@ public class Platform : MonoBehaviour
             ball.Launch(launchDir);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        Sound.instance.playBallBounceSound();
+    }
 }

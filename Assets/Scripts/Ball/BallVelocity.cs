@@ -7,14 +7,12 @@ public class BallVelocity : MonoBehaviour {
     public static BallVelocity instance;
     [SerializeField] float ballSpeed = 5f;
     Rigidbody2D rb2d;
-    AudioSource ballBounceSfx;
     float hitAspect(Vector2 ballPosition, Vector2 racketPosition, float platformWidth) {
         return (ballPosition.x - racketPosition.x) / platformWidth;        
     }
 
     void Start() {
         //ball movement
-        ballBounceSfx = GetComponent<AudioSource>();
         rb2d.velocity = Vector2.up * ballSpeed;
     }
 
@@ -37,8 +35,6 @@ public class BallVelocity : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
-        ballBounceSfx.Play(0);
-
         if(collision.gameObject.name == "platform") {
             float aspect = hitAspect(transform.position, collision.transform.position, collision.collider.bounds.size.x);
             Vector2 direction = new Vector2(aspect, 1).normalized;
