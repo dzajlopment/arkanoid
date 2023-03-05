@@ -10,8 +10,6 @@ public class DestroyBrick : MonoBehaviour{
         trueSilverHp--;
     }   
 
-public class DestroyBrick : MonoBehaviour
-{
     public GameObject powerupCapsule; //for spawning of powerup capsules
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -47,4 +45,5 @@ public class DestroyBrick : MonoBehaviour
             Sound.instance.playDestroyedBrickSound();
             Destroy(gameObject);
         }
+    }
 }

@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 6506120454566058831}
   - component: {fileID: 6506120454566058864}
   - component: {fileID: 6506120454566058865}
+  - component: {fileID: 4667971394999436426}
   m_Layer: 0
   m_Name: ball
   m_TagString: Ball
@@ -399,3 +400,19 @@ MonoBehaviour:
   ball: {fileID: 6506120454566058825}
   platformObject: {fileID: 6506120454044995365}
   platform: {fileID: 6506120454044995367}
+--- !u!58 &4667971394999436426
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506120454566058825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.18

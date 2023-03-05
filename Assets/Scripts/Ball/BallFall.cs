@@ -12,6 +12,17 @@ public class BallFall : MonoBehaviour
     Vector2 ballOnPlatformPosition;
     int lifes;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name.Length <= 5)
+        {
+            return;
+        }
+        if (Powerups.instance.isBallPowerful && collision.name.Substring(0, 6) == "brick-")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 
     // Update is called once per frame
     void Update() {
@@ -20,9 +31,10 @@ public class BallFall : MonoBehaviour
         if(ballPositionY < -6){
             LifesSystem.instance.removeLife();
             lifes = LifesSystem.instance.lifes;
-
+            Powerups.instance.resetPowerups();
+            Powerups.instance.refreshCapsule();
             //Delete the ball and platform on 0 lifes
-            if(lifes == 0){
+            if (lifes == 0){
                 Destroy(ball);
                 Destroy(platformObject);
                 return;

@@ -46,7 +46,7 @@ public class ScoreSystem : MonoBehaviour {
         }
 
         refreshScoreText();
-        if(score >= 100 && Powerups.areEnoughPoints == false){
+        if(score >= 1000 && Powerups.areEnoughPoints == false){
             Powerups.areEnoughPoints = true;
         }
     }

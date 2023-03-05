@@ -12,18 +12,22 @@ public class Powerups : MonoBehaviour
 
     public GameObject guardian; //holds reference to the guardian prefab
     public GameObject laser; //holds reference to the laser prefab
+    public GameObject gate; //holds reference to the doors prefab
 
     public Sprite normalPlatform; // holds platform states
     public Sprite warPlatform;
+
+    public bool isBallPowerful;
 
     private Platform platform; //holds reference to the main platform
     private GameObject guard; //holds the right guardian shield
     
     // Start is called before the first frame update
     void Start()
-    {
+    {                   //this sets up all needed objects and variables at the start of the level
         alteration = -1;
         instance = this;
+        isBallPowerful = false;
         shouldPowerupSpawn = true;
         guard = Instantiate(guardian);
         guard.SetActive(false);
@@ -79,6 +83,37 @@ public class Powerups : MonoBehaviour
         CancelInvoke("makeLaser");
     }
 
+    public void createExits()
+    {
+        var brama1 = Instantiate(gate);
+        brama1.transform.position = new Vector2(-8.78f, -4.1f);
+        var brama2 = Instantiate(gate);
+        brama2.transform.position = new Vector2(8.728f, -4.1f);
+    }
+
+    public void resetPowerups()
+    {
+        interruptGuard();
+        shortPlatform();
+        laserDisabled();
+        isBallPowerful = false;
+        if(FindObjectOfType<PowerupCapsule>() != null)
+        {
+            Destroy(FindObjectOfType<PowerupCapsule>().gameObject);
+        }
+    }
+
+    void hardRefresh()
+    {
+        shouldPowerupSpawn = true;
+        Debug.Log("pawn");
+    }
+
+    public void refreshCapsule()
+    {
+        Debug.Log("res");
+        Invoke("hardRefresh", 6f);
+    }
 
     // Update is called once per frame
     void Update()
